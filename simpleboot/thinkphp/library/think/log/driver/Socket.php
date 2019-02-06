@@ -268,7 +268,7 @@ class Socket
         curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 
         $headers = [
-            "Content-Type: app/json;charset=UTF-8",
+            "Content-Type: application/json;charset=UTF-8",
         ];
 
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); //设置header

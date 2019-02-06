@@ -51,7 +51,7 @@ class Download extends Response
         }
 
         $this->header['Pragma']                    = 'public';
-        $this->header['Content-Type']              = $mimeType ?: 'app/octet-stream';
+        $this->header['Content-Type']              = $mimeType ?: 'application/octet-stream';
         $this->header['Cache-control']             = 'max-age=' . $this->expire;
         $this->header['Content-Disposition']       = $this->openinBrowser ? 'inline' : 'attachment; filename="' . $name . '"';
         $this->header['Content-Length']            = $size;

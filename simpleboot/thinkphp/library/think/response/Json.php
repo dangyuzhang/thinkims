@@ -20,7 +20,7 @@ class Json extends Response
         'json_encode_param' => JSON_UNESCAPED_UNICODE,
     ];
 
-    protected $contentType = 'app/json';
+    protected $contentType = 'application/json';
 
     /**
      * 处理数据

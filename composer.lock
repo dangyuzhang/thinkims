@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d78d5c5cb25b97fb7d238efc6c2b87a5",
+    "content-hash": "97b45e6947a7f3748e4e886a5e54dc32",
     "packages": [
         {
             "name": "phpoffice/phpexcel",
@@ -71,16 +71,16 @@
         },
         {
             "name": "topthink/framework",
-            "version": "v5.1.33",
+            "version": "v5.1.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/framework.git",
-                "reference": "477e1cef91290a36398ecbcdffcec7268d80f0dd"
+                "reference": "7c8cd1ea2bd4683a6ef46af415334260c6e2cc15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/framework/zipball/477e1cef91290a36398ecbcdffcec7268d80f0dd",
-                "reference": "477e1cef91290a36398ecbcdffcec7268d80f0dd",
+                "url": "https://api.github.com/repos/top-think/framework/zipball/7c8cd1ea2bd4683a6ef46af415334260c6e2cc15",
+                "reference": "7c8cd1ea2bd4683a6ef46af415334260c6e2cc15",
                 "shasum": ""
             },
             "require": {
@@ -118,7 +118,7 @@
                 "orm",
                 "thinkphp"
             ],
-            "time": "2019-01-16T06:10:52+00:00"
+            "time": "2019-01-30T06:38:38+00:00"
         },
         {
             "name": "topthink/think-installer",

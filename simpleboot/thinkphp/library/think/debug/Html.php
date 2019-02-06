@@ -43,7 +43,7 @@ class Html
         $request     = Container::get('request');
         $contentType = $response->getHeader('Content-Type');
         $accept      = $request->header('accept');
-        if (strpos($accept, 'app/json') === 0 || $request->isAjax()) {
+        if (strpos($accept, 'application/json') === 0 || $request->isAjax()) {
             return false;
         } elseif (!empty($contentType) && strpos($contentType, 'html') === false) {
             return false;
