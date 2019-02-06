@@ -12,7 +12,7 @@
 namespace ims\controller;
 
 
-class WapController extends IMSController
+class MController extends IMSController
 {
 
 }
