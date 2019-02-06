@@ -1,0 +1,39 @@
+{extend name="layout" /}
+
+{block name="extra_css"}
+<style type="text/css">
+*{padding: 0;margin: 0;}
+div{padding: 4px 48px;}
+a{color: #2E5CD5;cursor: pointer;text-decoration: none}
+a:hover{text-decoration: underline;}
+body{background: #fff;font-family: "Century Gothic", "Microsoft yahei";color: #333;font-size: 18px;}
+h1{font-size: 100px;font-weight: normal;margin-bottom: 12px;}
+p{line-height: 1.6em;font-size: 42px}
+</style>
+{/block}
+
+{block name="extra_title"}
+开始使用 ThinkIMS!
+{/block}
+
+{block name="extra_main"}
+<div style="padding: 24px 48px;">
+    <h1>:) </h1>
+    <p> ThinkIMS V1.0.1<br/>
+        <span style="font-size:30px">
+            开始使用 ThinkIMS! - 它是一个免费的开源信息管理系统(IMS)
+        </span>
+    </p>
+</div>
+{/block}
+
+{block name="extra_js"}
+<script>
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form'], function () {
+        var layer = layui.layer
+            , form = layui.form;
+
+    });
+</script>
+{/block}

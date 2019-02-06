@@ -1,0 +1,36 @@
+{
+    "name": "thinkims/thinkims",
+    "description": "ThinkIMS based on ThinkPHP 5.1, it is a free and open source Information Management System(IMS)",
+    "type": "project",
+    "keywords": [
+        "framework",
+        "ThinkPHP",
+        "ThinkIMS",
+        "IMS"
+    ],
+    "homepage": "http://thinkims.cn/",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "dangyuzhang",
+            "email": "2085@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "topthink/framework": "5.1.*",
+        "phpoffice/phpexcel": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "app": "app",
+            "ims": "simpleboot/ims"
+        }
+    },
+    "extra": {
+        "think-path": "simpleboot/thinkphp"
+    },
+    "config": {
+        "vendor-dir": "simpleboot/vendor"
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>{block name="extra_title"}开始使用 ThinkIMS!{/block}</title>
+<link rel="stylesheet" href="__STATUS_PLUGINS__/layui-2.4.5/css/layui.css">
+{block name="extra_css"}{/block}
+</head>
+<body>
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+{block name="extra_menu"}
+{/block}
+
+{block name="extra_main"}
+开始使用 ThinkIMS!
+{/block}
+
+{block name="extra_footer"}
+{/block}
+
+<script src="__STATUS_PLUGINS__/layui-2.4.5/layui.js"></script>
+{block name="extra_js"}
+<script type="text/javascript">
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form'], function(){
+        var layer = layui.layer
+            ,form = layui.form;
+
+    });
+</script>
+{/block}
+</body>
+</html>
