@@ -19,7 +19,7 @@ define('IMS_ROOT', __DIR__);
 define('APP_PATH', IMS_ROOT . '/app');
 
 // 定义IMS核心包目录
-define('IMS_PATH', IMS_ROOT . '/simpleboot/ims');
+define('IMS_PATH', IMS_ROOT . '/simpleboot/thinkims');
 
 // 定义扩展目录
 define('EXTEND_PATH', IMS_ROOT . '/simpleboot/extend');
@@ -28,14 +28,18 @@ define('VENDOR_PATH', IMS_ROOT . '/simpleboot/vendor');
 // 定义IMS核心包目录
 define('IMS_TEMPLATE_PATH', IMS_ROOT . '/templates');
 
+// 定义应用的运行时目录
+define('RUNTIME_PATH', IMS_ROOT . '/data/runtime');
+define('TEMP_PATH', RUNTIME_PATH . 'temp');
+
 // 定义IMS 版本号
-define('THINKIMS_VERSION', '1.0.1');
+define('THINKIMS_VERSION', '1.5.5.26');
 
 // 加载基础文件
 require IMS_ROOT . '/simpleboot/thinkphp/base.php';
 
-// 应用初始化
-Container::get('app')->path(__DIR__ . '/app/')->initialize();
+// 执行应用并响应
+Container::get('app')->run()->send();
 
 // 控制台初始化
 Console::init();

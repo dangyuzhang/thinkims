@@ -222,18 +222,18 @@ class Request
      * @var array
      */
     protected $mimeType = [
-        'xml'   => 'application/xml,text/xml,application/x-xml',
-        'json'  => 'application/json,text/x-json,application/jsonrequest,text/json',
-        'js'    => 'text/javascript,application/javascript,application/x-javascript',
+        'xml'   => 'app/xml,text/xml,app/x-xml',
+        'json'  => 'app/json,text/x-json,app/jsonrequest,text/json',
+        'js'    => 'text/javascript,app/javascript,app/x-javascript',
         'css'   => 'text/css',
-        'rss'   => 'application/rss+xml',
-        'yaml'  => 'application/x-yaml,text/yaml',
-        'atom'  => 'application/atom+xml',
-        'pdf'   => 'application/pdf',
+        'rss'   => 'app/rss+xml',
+        'yaml'  => 'app/x-yaml,text/yaml',
+        'atom'  => 'app/atom+xml',
+        'pdf'   => 'app/pdf',
         'text'  => 'text/plain',
         'image' => 'image/png,image/jpg,image/jpeg,image/pjpeg,image/gif,image/webp,image/*',
         'csv'   => 'text/csv',
-        'html'  => 'text/html,application/xhtml+xml,*/*',
+        'html'  => 'text/html,app/xhtml+xml,*/*',
     ];
 
     /**
@@ -1039,7 +1039,7 @@ class Request
 
     protected function getInputData($content)
     {
-        if (false !== strpos($this->contentType(), 'application/json') || 0 === strpos($content, '{"')) {
+        if (false !== strpos($this->contentType(), 'app/json') || 0 === strpos($content, '{"')) {
             return (array) json_decode($content, true);
         } elseif (strpos($content, '=')) {
             parse_str($content, $data);

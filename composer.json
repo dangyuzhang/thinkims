@@ -4,9 +4,8 @@
     "type": "project",
     "keywords": [
         "framework",
-        "ThinkPHP",
-        "ThinkIMS",
-        "IMS"
+        "thinkphp",
+        "ORM"
     ],
     "homepage": "http://thinkims.cn/",
     "license": "Apache-2.0",
@@ -18,13 +17,12 @@
     ],
     "require": {
         "php": ">=5.6.0",
-        "topthink/framework": "5.1.*",
-        "phpoffice/phpexcel": "^1.8"
+        "topthink/framework": "5.1.*"
     },
     "autoload": {
         "psr-4": {
-            "app": "app",
-            "ims": "simpleboot/ims"
+            "app\\": "app",
+            "ims\\": "simpleboot/thinkims"
         }
     },
     "extra": {

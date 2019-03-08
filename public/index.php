@@ -1,12 +1,12 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkIMS [ WE CAN DO IT MORE SIMPLE ]
+// | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2015-2019 http://www.thinkims.cn/ All rights reserved.
+// | Copyright (c) 2006-2018 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +---------------------------------------------------------------------
-// | Author: dangyuzhang <2085@163.com>
+// +----------------------------------------------------------------------
+// | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
 // [ 应用入口文件 ]
@@ -19,7 +19,7 @@ define('IMS_ROOT', dirname(__DIR__));
 define('APP_PATH', IMS_ROOT . '/app');
 
 // 定义IMS核心包目录
-define('IMS_PATH', IMS_ROOT . '/simpleboot/ims');
+define('IMS_PATH', IMS_ROOT . '/simpleboot/thinkims');
 
 // 定义扩展目录
 define('EXTEND_PATH', IMS_ROOT . '/simpleboot/extend');
@@ -33,7 +33,7 @@ define('RUNTIME_PATH', IMS_ROOT . '/data/runtime');
 define('TEMP_PATH', RUNTIME_PATH . 'temp');
 
 // 定义IMS 版本号
-define('THINKIMS_VERSION', '1.0.1');
+define('THINKIMS_VERSION', '1.5.5.26');
 
 // 加载基础文件
 require IMS_ROOT . '/simpleboot/thinkphp/base.php';

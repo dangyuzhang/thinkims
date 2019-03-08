@@ -10,13 +10,3 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
-if(file_exists(IMS_PATH."/common.php")){
-    include IMS_PATH."/common.php";
-}
-
-/**
- *  测试函数
- */
-function ims_test_function(){
-    echo 'test function';
-}

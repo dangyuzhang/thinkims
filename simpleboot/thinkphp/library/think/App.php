@@ -20,7 +20,7 @@ use think\route\Dispatch;
  */
 class App extends Container
 {
-    const VERSION = '5.1.34 LTS';
+    const VERSION = '5.1.35 LTS';
 
     /**
      * 当前模块路径
@@ -870,7 +870,7 @@ class App extends Container
     public function getAppPath()
     {
         if (is_null($this->appPath)) {
-            $this->appPath = Loader::getRootPath() . 'application' . DIRECTORY_SEPARATOR;
+            $this->appPath = Loader::getRootPath() . 'app' . DIRECTORY_SEPARATOR;
         }
 
         return $this->appPath;

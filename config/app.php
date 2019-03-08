@@ -19,7 +19,7 @@ return [
     // 应用地址
     'app_host'               => '',
     // 应用调试模式
-    'app_debug'              => false,
+    'app_debug'              => true,
     // 应用Trace
     'app_trace'              => false,
     // 是否支持多模块
@@ -47,14 +47,14 @@ return [
     // 应用类库后缀
     'class_suffix'           => false,
     // 控制器类后缀
-    'controller_suffix'      => false,
+    'controller_suffix'      => true,
 
     // +----------------------------------------------------------------------
     // | 模块设置
     // +----------------------------------------------------------------------
 
     // 默认模块名
-    'default_module'         => 'home',
+    'default_module'         => 'index',
     // 禁止访问模块
     'deny_module_list'       => ['common'],
     // 默认控制器名
@@ -73,8 +73,6 @@ return [
     'action_suffix'          => '',
     // 自动搜索控制器
     'controller_auto_search' => false,
-    // 控制器类后缀
-    'controller_suffix'      => true,
 
     // +----------------------------------------------------------------------
     // | URL设置
@@ -99,11 +97,11 @@ return [
     // 是否开启路由延迟解析
     'url_lazy_route'         => false,
     // 是否强制使用路由
-    'url_route_must'         => false,
+    'url_route_must'         => true,
     // 合并路由规则
     'route_rule_merge'       => false,
     // 路由是否完全匹配
-    'route_complete_match'   => false,
+    'route_complete_match'   => true,
     // 使用注解路由
     'route_annotation'       => false,
     // 域名根，如thinkphp.cn
@@ -143,6 +141,6 @@ return [
     // 显示错误信息
     'show_error_msg'         => false,
     // 异常处理handle类 留空使用 \think\exception\Handle
-    'exception_handle'       => 'ims\lib\exception\IMSHandler',
+    'exception_handle'       => 'ims\library\exception\IMSHandler',
 
 ];
