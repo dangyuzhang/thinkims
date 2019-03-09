@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    {block name="head"}
+    <title>管理后台</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    {/block}
+    <link rel="stylesheet" href="__STATUS_PLUGINS__/layui-v2.4.5/css/layui.css">
+    <link rel="stylesheet" href="__STATUS_ADMIN__/css/common.css">
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {block name="extra_css"}{/block}
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">管理后台</div>
+        <!-- 头部区域 -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item"><a href="">控制台</a></li>
+            <li class="layui-nav-item"><a href="">商品管理</a></li>
+            <li class="layui-nav-item"><a href="">用户</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">其它系统</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">邮件管理</a></dd>
+                    <dd><a href="">消息管理</a></dd>
+                    <dd><a href="">授权管理</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">退了</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-ims">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域 -->
+            <ul class="layui-nav layui-nav-tree layui-bg-ims"  lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;"><i class="layui-icon layui-icon-set"></i>列表管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-find-fill"></i>列表一</a></dd>
+                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-find-fill"></i>列表二</a></dd>
+                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-find-fill"></i>列表三</a></dd>
+                        <dd><a href=""><i class="layui-icon layui-icon-find-fill"></i>超链接</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="layui-icon layui-icon-app"></i>解决方案</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-list"></i>列表一</a></dd>
+                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-list"></i>列表二</a></dd>
+                        <dd><a href=""><i class="layui-icon layui-icon-list"></i>超链接</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-user"></i>云市场</a></li>
+                <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-form"></i>发布商品</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        {block name="extra_main"}
+        <div style="padding: 15px;">开始使用!</div>
+        {/block}
+    </div>
+    {block name="extra_footer"}
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © layui.com - 底部固定区域
+    </div>
+    {/block}
+</div>
+<script src="__STATUS_PLUGINS__/layui-v2.4.5/layui.js"></script>
+<script src="__STATUS_ADMIN__/js/app.js"></script>
+{block name="extra_js"}
+<script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+        var element = layui.element;
+
+    });
+</script>
+{/block}
+</body>
+</html>

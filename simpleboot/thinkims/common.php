@@ -9,3 +9,64 @@
 // | Author: dangyuzhang <2085@163.com>
 // +----------------------------------------------------------------------   
 
+
+/**
+ * 密码加密
+ * @param $password 原始密码
+ * @param string $authCode 加密字符串
+ * @return string 加密后的密码
+ */
+function ims_password($password, $authCode = '')
+{
+    if (empty($authCode)) {
+        $authCode = config('database.authcode');
+    }
+    return md5(md5($authCode . $password));
+}
+
+/**
+ * 判断密码是否匹配
+ * @param $password 用户密码
+ * @param $passwordInDb 数据密码
+ * @return bool 是否匹配
+ */
+function ims_compare_password($password, $passwordInDb)
+{
+    if (empty($password) || empty($passwordInDb)){
+        return false;
+    }
+    return ims_password($password) == $passwordInDb;
+}
+
+/**
+ * 获取随机字符串
+ * @param int $len 长度
+ * @return string 返回字符串
+ */
+function ims_random_string($len = 6)
+{
+    $chars    = [
+        "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
+        "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v",
+        "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G",
+        "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
+        "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2",
+        "3", "4", "5", "6", "7", "8", "9"
+    ];
+    $charsLen = count($chars) - 1;
+    shuffle($chars);    // 将数组打乱
+    $output = "";
+    for ($i = 0; $i < $len; $i++) {
+        $output .= $chars[mt_rand(0, $charsLen)];
+    }
+    return $output;
+}
+
+/**
+ * 获取ThinkIMS版本
+ * @return string
+ */
+function ims_version()
+{
+    return THINKIMS_VERSION;
+}

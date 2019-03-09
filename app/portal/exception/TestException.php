@@ -10,10 +10,17 @@
 // +----------------------------------------------------------------------   
 
 
-namespace ims\controller;
+namespace app\portal\exception;
 
 
-class ApiController extends RestController
+use ims\library\exception\IMSException;
+
+class TestException extends IMSException
 {
-
+    // 返回状态码 例如 200 404 500
+    public $status = 400;
+    // 返回错误消息
+    public $message = '测试错误';
+    // 返回码
+    public $code = 1;
 }

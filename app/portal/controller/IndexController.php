@@ -1,11 +1,12 @@
 <?php
-namespace app\index\controller;
+namespace app\portal\controller;
 
-use app\index\exception\TestException;
-use app\index\validate\IdValidate;
-use ims\controller\IMSController;
+use app\portal\exception\TestException;
+use app\portal\validate\IdValidate;
+use ims\controller\BaseController;
+use think\facade\Cache;
 
-class IndexController extends IMSController
+class IndexController extends BaseController
 {
     public function index()
     {
@@ -38,6 +39,14 @@ class IndexController extends IMSController
      */
     public function ajax(){
         return $this->ajaxSuccess();
+    }
+
+    /**
+     *  测试缓存
+     */
+    public function cache(){
+        echo Cache::set("userId","123456",7200);
+        echo "ok";die;
     }
 
 

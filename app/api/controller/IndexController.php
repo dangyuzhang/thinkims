@@ -10,20 +10,15 @@
 // +----------------------------------------------------------------------   
 
 
-namespace app\index\validate;
+namespace app\api\controller;
 
 
-use ims\library\validate\IMSValidate;
+use ims\controller\ApiController;
 
-class IdValidate extends IMSValidate
+class IndexController extends ApiController
 {
-    protected $rule = [
-        'id' => 'require|number|length:1,8',
-    ];
+    public function index(){
+        $this->success();
+    }
 
-    protected $message = [
-        'id.require'         =>  'ID不存在！',
-        'id.number'         =>  'ID必须是数字',
-        'id.length'         =>  'ID不正确',
-    ];
 }

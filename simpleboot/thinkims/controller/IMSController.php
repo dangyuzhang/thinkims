@@ -17,7 +17,6 @@ use think\Controller;
 
 class IMSController extends Controller
 {
-
     /**
      * ajax 成功
      * @param string $msg
@@ -27,15 +26,16 @@ class IMSController extends Controller
      * @param array $options
      * @return \think\response\Json
      */
-    protected function ajaxSuccess($msg = '操作成功！', $data = [], $header = [], $options = []){
+    protected function ajaxSuccess($msg = '操作成功！', $data = [], array $header = [], $options = [])
+    {
         $result = [
             'code' => 0,
-            'msg'  => $msg
+            'msg' => $msg
         ];
-        if (!empty($data)){
+        if (!empty($data)) {
             $result['data'] = $data;
         }
-        return json($result,200,$header,$options);
+        return json($result, 200, $header, $options);
     }
 
     /**
@@ -47,15 +47,16 @@ class IMSController extends Controller
      * @param array $options
      * @return \think\response\Json
      */
-    protected function ajaxError($msg = '操作失败！',$code = 1, $data = [], array $header = [], $options = []){
+    protected function ajaxError($msg = '操作失败！', $code = 1, $data = [], array $header = [], $options = [])
+    {
         $result = [
             'code' => $code,
-            'msg'  => $msg
+            'msg' => $msg
         ];
-        if (!empty($data)){
+        if (!empty($data)) {
             $result['data'] = $data;
         }
-        return json($result,400,$header,$options);
+        return json($result, 400, $header, $options);
     }
 
 }

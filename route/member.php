@@ -9,23 +9,24 @@
 // | Author: dangyuzhang <2085@163.com>
 // +----------------------------------------------------------------------   
 
-
-namespace app\index\controller;
-
-
-use think\Controller;
-
-class ErrorController extends Controller
-{
-
-    public function pc(){
-
-        $this->fetch();
-    }
+use think\facade\Route;
+// 手机端模块路由注册
+Route::group('member', function () {
 
 
-    public function mobile(){
 
-        $this->fetch();
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});

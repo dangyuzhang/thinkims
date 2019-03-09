@@ -10,10 +10,15 @@
 // +----------------------------------------------------------------------   
 
 
-namespace ims\controller;
+namespace app\admin\controller;
 
 
-class ApiController extends RestController
+use ims\controller\AdminController;
+
+class IndexController extends AdminController
 {
+    public function index(){
+        return $this->fetch();
+    }
 
 }

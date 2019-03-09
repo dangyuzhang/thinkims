@@ -13,13 +13,18 @@
 // | 缓存设置
 // +----------------------------------------------------------------------
 
-return [
-    // 驱动方式
-    'type'   => 'File',
-    // 缓存保存目录
-    'path'   => IMS_ROOT.'/data/runtime/cache',
-    // 缓存前缀
-    'prefix' => '',
-    // 缓存有效期 0表示永久缓存
-    'expire' => 0,
-];
+if (file_exists(IMS_ROOT . "/data/conf/redis.php")) {
+    $database = include IMS_ROOT . "/data/conf/redis.php";
+} else {
+    $database = [
+        // 驱动方式
+        'type'   => 'File',
+        // 缓存保存目录
+        'path'   => '',
+        // 缓存前缀
+        'prefix' => '',
+        // 缓存有效期 0表示永久缓存
+        'expire' => 0,
+    ];
+}
+return $database;

@@ -10,10 +10,20 @@
 // +----------------------------------------------------------------------   
 
 
-namespace ims\controller;
+namespace app\portal\validate;
 
 
-class ApiController extends RestController
+use ims\library\validate\IMSValidate;
+
+class IdValidate extends IMSValidate
 {
+    protected $rule = [
+        'id' => 'require|number|length:1,8',
+    ];
 
+    protected $message = [
+        'id.require'         =>  'ID不存在！',
+        'id.number'         =>  'ID必须是数字',
+        'id.length'         =>  'ID不正确',
+    ];
 }

@@ -14,14 +14,14 @@ use think\facade\Route;
 Route::get('think', function () {
     return 'hello,ThinkPHP5!';
 });
-Route::get('/check', 'index/Index/check');
-Route::get('/err', 'index/Index/err');
-Route::get('/ajax', 'index/Index/ajax');
+Route::get('/check', 'portal/Index/check');
+Route::get('/err', 'portal/Index/err');
+Route::get('/ajax', 'portal/Index/ajax');
 
-Route::get('/','index/Index/index');
-Route::get('/hello/:name','index/Index/hello');
-Route::get('/error/pc','index/Error/pc');
-Route::get('/error/mobile','index/Error/mobile');
+Route::get('/','portal/Index/index');
+Route::get('/hello/:name','portal/Index/hello');
+Route::get('/cache','portal/Index/cache');
+Route::get('/error','portal/Error/index');
 
 return [
 

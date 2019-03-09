@@ -10,10 +10,20 @@
 // +----------------------------------------------------------------------   
 
 
-namespace ims\controller;
+namespace app\portal\controller;
 
 
-class ApiController extends RestController
+use ims\controller\BaseController;
+use think\facade\Request;
+
+class ErrorController extends BaseController
 {
-
+    /** PC 端错误页面
+     * @return mixed
+     */
+    public function index(){
+        $msg = Request::get('msg','未知错误！');
+        $this->assign('msg',$msg);
+        return $this->fetch();
+    }
 }

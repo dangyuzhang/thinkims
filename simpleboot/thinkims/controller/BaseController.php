@@ -13,7 +13,7 @@
 namespace ims\controller;
 
 
-class HomeController extends IMSController
+class BaseController extends IMSController
 {
 
 }

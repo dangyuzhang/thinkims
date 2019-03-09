@@ -10,10 +10,14 @@
 // +----------------------------------------------------------------------   
 
 
-namespace ims\controller;
+namespace app\member\controller;
 
 
-class ApiController extends RestController
+use ims\controller\MemberController;
+use think\facade\Request;
+
+class ErrorController extends MemberController
 {
+
 
 }

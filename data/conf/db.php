@@ -15,23 +15,23 @@ return [
     // 服务器地址
     'hostname'        => '127.0.0.1',
     // 数据库名
-    'database'        => '',
+    'database'        => 'thinkims',
     // 用户名
     'username'        => 'root',
     // 密码
-    'password'        => '',
+    'password'        => '123456',
     // 端口
     'hostport'        => '',
     // 连接dsn
     'dsn'             => '',
     // 数据库连接参数
     'params'          => [],
-    // 数据库编码默认采用utf8
-    'charset'         => 'utf8',
+    // 数据库编码默认采用utf8mb4
+    'charset'         => 'utf8mb4',
     // 数据库表前缀
     'prefix'          => 'ims_',
     // 数据库调试模式
-    'debug'           => true,
+    'debug'           => false,
     // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
     'deploy'          => 0,
     // 数据库读写是否分离 主从式有效
@@ -60,4 +60,6 @@ return [
     'break_reconnect' => false,
     // 断线标识字符串
     'break_match_str' => [],
+    // 登录授权码
+    'authcode' => 'bxNSzlUwsefxcW3r7o',
 ];

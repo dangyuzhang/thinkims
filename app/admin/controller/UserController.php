@@ -10,17 +10,15 @@
 // +----------------------------------------------------------------------   
 
 
-namespace app\index\exception;
+namespace app\admin\controller;
 
 
-use ims\library\exception\IMSException;
+use ims\controller\AdminController;
 
-class TestException extends IMSException
+class UserController extends AdminController
 {
-    // 返回状态码 例如 200 404 500
-    public $status = 400;
-    // 返回错误消息
-    public $message = '测试错误';
-    // 返回码
-    public $code = 1;
+    public function login(){
+        return $this->fetch();
+    }
+
 }

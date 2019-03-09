@@ -9,11 +9,24 @@
 // | Author: dangyuzhang <2085@163.com>
 // +----------------------------------------------------------------------   
 
+use think\facade\Route;
+// 手机端模块路由注册
+Route::group('mobile', function () {
+    Route::get('/error','mobile/Error/index');
 
-namespace ims\controller;
 
 
-class ApiController extends RestController
-{
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+});

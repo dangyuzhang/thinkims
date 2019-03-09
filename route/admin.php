@@ -9,11 +9,27 @@
 // | Author: dangyuzhang <2085@163.com>
 // +----------------------------------------------------------------------   
 
+use think\facade\Route;
+// 后台模块路由注册
+Route::group('admin', function () {
+    Route::get('/','admin/Index/index');
+    Route::get('/login','admin/User/login');
+    Route::get('/logout','admin/User/logout');
 
-namespace ims\controller;
 
 
-class ApiController extends RestController
-{
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+});

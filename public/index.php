@@ -28,10 +28,6 @@ define('VENDOR_PATH', IMS_ROOT . '/simpleboot/vendor');
 // 定义IMS核心包目录
 define('IMS_TEMPLATE_PATH', IMS_ROOT . '/templates');
 
-// 定义应用的运行时目录
-define('RUNTIME_PATH', IMS_ROOT . '/data/runtime');
-define('TEMP_PATH', RUNTIME_PATH . 'temp');
-
 // 定义IMS 版本号
 define('THINKIMS_VERSION', '1.5.5.26');
 

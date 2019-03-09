@@ -14,6 +14,7 @@ namespace ims\library\exception;
 
 
 use think\exception\Handle;
+use think\exception\HttpException;
 use think\facade\Log;
 use think\facade\Request;
 
@@ -41,16 +42,16 @@ class IMSHandler extends Handle
         // 记录错误日记
         Log::error($e->getMessage());
 
-        // 如果是ajax请求就返回json
-        if (Request::isAjax() || strpos(Request::header('accept'), 'html') == '') {
+        // 如果是请求异常(ajax)就返回json
+        if ((Request::isAjax() && $e instanceof HttpException) || strpos(Request::header('accept'), 'html') == '') {
             return json(['code' => $this->code, 'msg' => $this->message], $this->status);
         }
         // 如果是手机访问就转到手机端的自定义错误页面
         if (Request::isMobile()) {
-            return redirect('/error/m?msg=' . $this->message)->remember();
+            return redirect('/mobile/error?msg=' . $this->message)->remember();
         }
         // pc端的自定义错误页面
-        return redirect('/error/pc?msg=' . $this->message)->remember();
+        return redirect('/error?msg=' . $this->message)->remember();
     }
 
 }
