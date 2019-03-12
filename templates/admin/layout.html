@@ -55,9 +55,9 @@
             <!-- 左侧导航区域 -->
             <ul class="layui-nav layui-nav-tree layui-bg-ims"  lay-filter="test">
                 <li class="layui-nav-item layui-nav-itemed">
-                    <a class="" href="javascript:;"><i class="layui-icon layui-icon-set"></i>列表管理</a>
+                    <a class="" href="javascript:;"><i class="layui-icon layui-icon-set"></i>系统管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-find-fill"></i>列表一</a></dd>
+                        <dd><a href="{:url('admin/Setting/index')}"><i class="layui-icon layui-icon-find-fill"></i>系统配置</a></dd>
                         <dd><a href="javascript:;"><i class="layui-icon layui-icon-find-fill"></i>列表二</a></dd>
                         <dd><a href="javascript:;"><i class="layui-icon layui-icon-find-fill"></i>列表三</a></dd>
                         <dd><a href=""><i class="layui-icon layui-icon-find-fill"></i>超链接</a></dd>
@@ -77,10 +77,10 @@
         </div>
     </div>
 
-    <div class="layui-body">
+    <div class="layui-body" style="padding: 15px;">
         <!-- 内容主体区域 -->
         {block name="extra_main"}
-        <div style="padding: 15px;">开始使用!</div>
+        <div >开始使用!</div>
         {/block}
     </div>
     {block name="extra_footer"}
@@ -91,15 +91,9 @@
     {/block}
 </div>
 <script src="__STATUS_PLUGINS__/layui-v2.4.5/layui.js"></script>
+<script src="__STATUS_PLUGINS__/jquery.min.js"></script>
 <script src="__STATUS_ADMIN__/js/app.js"></script>
 {block name="extra_js"}
-<script>
-    //JavaScript代码区域
-    layui.use('element', function(){
-        var element = layui.element;
-
-    });
-</script>
 {/block}
 </body>
 </html>

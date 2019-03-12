@@ -17,5 +17,7 @@ use think\Model;
 
 class IMSModel extends Model
 {
+    protected $hidden = ['delete_time','create_time','update_time'];
+    protected $autoWriteTimestamp = 'datetime';
 
 }

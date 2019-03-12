@@ -18,7 +18,7 @@ use ims\controller\ApiController;
 class IndexController extends ApiController
 {
     public function index(){
-        $this->success();
+        $this->success("没有授权，请登录");
     }
 
 }

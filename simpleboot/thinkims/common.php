@@ -10,6 +10,9 @@
 // +----------------------------------------------------------------------   
 
 
+use ims\library\exception\DataException;
+use think\facade\Request;
+
 /**
  * 密码加密
  * @param $password 原始密码
@@ -61,6 +64,40 @@ function ims_random_string($len = 6)
     }
     return $output;
 }
+
+/**
+ * 字符串转数组
+ * @param $arr
+ * @return false|string
+ * @throws DataException
+ */
+function ims_array_to_json($arr){
+    if (is_array($arr)){
+        return json_encode($arr);
+    }
+    throw new DataException("参数错误，不是数组");
+}
+
+/**
+ * json 转 数组
+ * @param $json
+ * @return mixed
+ */
+function ims_json_to_array($json){
+    return json_decode($json,true);
+}
+
+/**
+ * 获取客户端IP地址
+ * @param integer $type 返回类型 0 返回IP地址 1 返回IPV4地址数字
+ * @param boolean $adv  是否进行高级模式获取（有可能被伪装）
+ * @return string
+ */
+function ims_get_client_ip($type = 0, $adv = true)
+{
+    return Request::ip($type,$adv);
+}
+
 
 /**
  * 获取ThinkIMS版本

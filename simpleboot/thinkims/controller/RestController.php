@@ -60,7 +60,7 @@ class RestController
         $header['Access-Control-Allow-Origin']  = '*';
         $header['Access-Control-Allow-Headers'] = 'X-Requested-With,Content-Type,XX-Device-Type,XX-Token,XX-Api-Version';
         $header['Access-Control-Allow-Methods'] = 'GET,POST,PATCH,PUT,DELETE,OPTIONS';
-        $response                               = Response::create($result, $type)->header($header);
+        $response                               = Response::create($result, $type,200)->header($header);
         throw new HttpResponseException($response);
     }
 
@@ -85,7 +85,7 @@ class RestController
         $header['Access-Control-Allow-Origin']  = '*';
         $header['Access-Control-Allow-Headers'] = 'X-Requested-With,Content-Type,XX-Device-Type,XX-Token';
         $header['Access-Control-Allow-Methods'] = 'GET,POST,PATCH,PUT,DELETE,OPTIONS';
-        $response                               = Response::create($result, $type)->header($header);
+        $response                               = Response::create($result, $type,400)->header($header);
         throw new HttpResponseException($response);
     }
 

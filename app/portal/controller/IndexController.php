@@ -1,8 +1,8 @@
 <?php
 namespace app\portal\controller;
 
-use app\portal\exception\TestException;
-use app\portal\validate\IdValidate;
+use app\common\exception\TestException;
+use app\common\validate\IdValidate;
 use ims\controller\BaseController;
 use think\facade\Cache;
 
@@ -24,7 +24,7 @@ class IndexController extends BaseController
      */
     public function check()
     {
-        (new IdValidate())->goCheck();
+        (new IdValidate())->checkParam();
     }
 
     /**
@@ -47,6 +47,10 @@ class IndexController extends BaseController
     public function cache(){
         echo Cache::set("userId","123456",7200);
         echo "ok";die;
+    }
+
+    public function testJson(){
+        return $this->ajaxSuccess("123");
     }
 
 

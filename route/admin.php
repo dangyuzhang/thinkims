@@ -13,7 +13,10 @@ use think\facade\Route;
 // 后台模块路由注册
 Route::group('admin', function () {
     Route::get('/','admin/Index/index');
-    Route::get('/login','admin/User/login');
+    Route::get('/setting','admin/Setting/index');
+    Route::post('/setting/add','admin/Setting/add');
+    Route::get('/login','admin/Admin/login');
+    Route::post('/ajax/login','admin/Admin/ajaxLogin');
     Route::get('/logout','admin/User/logout');
 
 

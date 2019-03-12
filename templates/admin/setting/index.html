@@ -1,0 +1,341 @@
+{extend name="layout" /}
+
+{block name="extra_main"}
+<div class="layui-tab layui-tab-brief">
+    <ul class="layui-tab-title">
+        <li class="layui-this">站点配置</li>
+        <li>业务配置</li>
+        <li>系统设置</li>
+        <li>邮箱配置</li>
+        <li>其他配置</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <form class="layui-form">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">站点域名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="basehost" value="{$website['basehost']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">站点主页</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="indexurl" value="{$website['indexurl']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">站点名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="webname" value="{$website['webname']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">SEO标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="seo_title" value="{$website['seo_title']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">SEO关键字</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="seo_keywords" value="{$website['seo_keywords']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">SEO描述</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="seo_description" value="{$website['seo_description']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">IPC备案</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="ipc" value="{$website['ipc']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">电话号码</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="tel" value="{$website['tel']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">手机号码</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="mobile" value="{$website['mobile']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">400电话</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="tel_400" value="{$website['tel_400']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">邮箱</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="email" value="{$website['email']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">联系人</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="linkman" value="{$website['linkman']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">公司名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="company_name" value="{$website['company_name']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">公司地址</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="company_address" value="{$website['company_address']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">版权信息</label>
+                    <div class="layui-input-block">
+                        <textarea name="copyright" placeholder="请输入版权信息" class="layui-textarea">{$website['copyright']}</textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" name="" lay-submit lay-filter="formWebsite">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="layui-tab-item">
+            <form class="layui-form">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">输入框</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码框</label>
+                    <div class="layui-input-inline">
+                        <input type="password" name="password" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">辅助文字</div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">开关</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" name="switch" lay-skin="switch" value="1">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">单选框</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="sex" value="男" title="男">
+                        <input type="radio" name="sex" value="女" title="女" checked>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">文本域</label>
+                    <div class="layui-input-block">
+                        <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" name="" lay-submit lay-filter="formOperation">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="layui-tab-item">
+            <form class="layui-form">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">是否开启用户注册</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" name="is_user_reg" lay-skin="switch" value="1">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">上传大小限制</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="filesize" value="{$system['filesize']}" placeholder="请输入上传大小限制" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">cookie加密码</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="cookie" value="{$system['cookie']}" placeholder="请输入cookie加密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">图片类型</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="imgtype" value="{$system['imgtype']}" placeholder="请输入图片类型" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">软件类型</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="softtype" value="{$system['softtype']}" placeholder="请输入软件类型" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">多媒体类型</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="mediatype" value="{$system['mediatype']}" placeholder="请输入多媒体类型" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" name="" lay-submit lay-filter="formSystem">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="layui-tab-item">
+            <form class="layui-form">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">发件人</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="send_persion" value="{$email['send_persion']}" placeholder="请输入发件人" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">邮箱地址</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="email_address" value="{$email['email_address']}" placeholder="请输入邮箱地址" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">SMTP服务器</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="smtp_service" value="{$email['smtp_service']}" placeholder="请输入SMTP服务器" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">连接方式</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="connection_type" value="{$email['connection_type']}" placeholder="请输入连接方式" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">SMTP服务器端口</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="smtp_service_port" value="{$email['smtp_service_port']}" placeholder="请输入SMTP服务器端口" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">发件箱帐号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="send_accress" value="{$email['send_accress']}" placeholder="请输入发件箱帐号" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">发件箱密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="send_password" value="{$email['send_password']}" placeholder="请输入发件箱密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" name="" lay-submit lay-filter="formEmail">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="layui-tab-item">
+            <form class="layui-form">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">AppID(小程序ID)</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="wx_appid" value="{$social['wx_appid']}" placeholder="请输入微信AppId" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">AppSecret(小程序密钥)</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="wx_appsecret" value="{$social['wx_appsecret']}" placeholder="请输入微信AppSecret" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">AppID(QQID)</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="qq_appid" value="{$social['qq_appid']}" placeholder="请输入微信AppId" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">AppSecret(QQ密钥)</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="qq_appsecret" value="{$social['qq_appsecret']}" placeholder="请输入微信AppSecret" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" name="" lay-submit lay-filter="formSocial">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="extra_js"}
+<script type="text/javascript">
+    layui.use(['element','form','layer'], function(){
+        var element = layui.element;
+        var form = layui.form;
+        var layer = layui.layer;
+        //监听提交
+        form.on('submit(formSystem)', function(data){
+            settingPost(data.field,'系统配置','system')
+            return false;
+        });
+        form.on('submit(formOperation)', function(data){
+            settingPost(data.field,'业务配置','operation')
+            return false;
+        });
+        form.on('submit(formWebsite)', function(data){
+            settingPost(data.field,'站点配置','website')
+            return false;
+        });
+        form.on('submit(formEmail)', function(data){
+            settingPost(data.field,'邮箱配置','email')
+            return false;
+        });
+        form.on('submit(formSocial)', function(data){
+            settingPost(data.field,'第三方配置','social')
+            return false;
+        });
+        // 提交数据
+        function settingPost(data,title,name) {
+            $.ajax({
+                type: "POST",
+                url: app.baseUrl+"/setting/add",
+                data: {
+                    title: title,
+                    name: name,
+                    value: data
+                },
+                success: function (res) {
+                    layer.alert(res.msg)
+                },
+                error: function (error) {
+                    if (error.responseJSON.code == 401){
+                        window.location.href = "/admin/login"
+                    }else {
+                        layer.alert(error.responseJSON.msg)
+                    }
+                }
+            })
+        }
+    });
+</script>
+{/block}

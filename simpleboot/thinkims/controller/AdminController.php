@@ -13,7 +13,21 @@
 namespace ims\controller;
 
 
+use think\App;
+use think\facade\Request;
+use think\facade\Session;
+
 class AdminController extends IMSController
 {
 
+    function __construct(App $app = null)
+    {
+        parent::__construct($app);
+        $path = Request::path();
+        if ($path != 'admin/login' && $path != 'admin/ajax/login'){
+            if (empty(Session::get('ADMIN_ID'))){
+                $this->error('登录失效,请重新登录！','/admin/login');
+            }
+        }
+    }
 }
